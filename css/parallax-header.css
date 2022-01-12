@@ -1,0 +1,71 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  perspective: 2px;
+  transform-style: preserve-3d;
+  font-family: sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.parallax {
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  transform-style: inherit;
+}
+
+.parallax::after {
+  content: "";
+  min-height: 100vh;
+  background: url(/dist/mountains.webp);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  z-index: -1;
+  transform-origin: center center;
+  transform: translateZ(-2px) scale(2);
+}
+
+h1 {
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 span {
+  font-size: 2rem;
+}
+
+.content {
+  background-color: #fff;
+  padding: 5rem;
+  perspective: 2px;
+}
+
+p {
+  line-height: 1.8;
+}
+
+/*# sourceMappingURL=parallax-header.css.map */

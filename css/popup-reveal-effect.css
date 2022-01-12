@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+  overflow: hidden;
+}
+
+.card {
+  width: 250px;
+  height: 500px;
+  background-color: orange;
+  padding: 30px 60px 30px 30px;
+  border-radius: 10px;
+  transition: all 1s;
+  clip-path: circle(8% at 85% 15%);
+  font-family: sans-serif;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.card:hover {
+  clip-path: circle(100%);
+}
+
+/*# sourceMappingURL=popup-reveal-effect.css.map */

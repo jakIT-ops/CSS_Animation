@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: lightgrey;
+  overflow: hidden;
+}
+
+.ocean {
+  width: 80vw;
+  height: auto;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/*# sourceMappingURL=clip-path.css.map */

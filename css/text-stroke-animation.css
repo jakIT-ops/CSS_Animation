@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #eb538d, #ee8733);
+  font-family: sans-serif;
+}
+
+.mytext {
+  font-size: 8em;
+  font-weight: 600;
+  fill: rgba(255, 255, 255, 0.2);
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-width: 2px;
+  stroke-dasharray: 50;
+  stroke-linejoin: round;
+  animation: drow 3s ease-in-out infinite;
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 100;
+  }
+}
+
+/*# sourceMappingURL=text-stroke-animation.css.map */

@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  color: white;
+}
+
+h1 {
+  font-size: 64px;
+  font-family: Roboto;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(30deg, #ff0000, #0000ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-gradient-bg 5s linear infinite;
+}
+
+@keyframes text-gradient-bg {
+  from {
+    filter: hue-rotate(0);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=text-animated-gradient.css.map */

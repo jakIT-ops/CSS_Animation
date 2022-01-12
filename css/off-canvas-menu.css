@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: lightgrey;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.content-container {
+  position: relative;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.page-title {
+  text-align: center;
+  border-bottom: 1px solid #222;
+  padding-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.page-subtitle {
+  font-weight: 200;
+  text-align: center;
+  margin: 20px auto;
+}
+
+p {
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.slideOutMenu {
+  position: fixed;
+  width: 150px;
+  height: 100%;
+  top: 0;
+  left: -180px;
+  padding: 20px;
+  background-color: #212121;
+  transition: all 0.3s ease-in-out;
+}
+.slideOutMenu ul {
+  list-style: none;
+}
+.slideOutMenu li {
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 20px 0;
+}
+.slideOutMenu li:last-child {
+  border-bottom: none;
+}
+.slideOutMenu li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  font-size: 24px;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+#menu-toggle:checked ~ .slideOutMenu {
+  left: 0;
+}
+
+#menu-toggle:checked + .menu-icon {
+  left: 210px;
+}
+
+#menu-toggle:checked ~ .content-container {
+  padding-left: 210px;
+}
+
+/*# sourceMappingURL=off-canvas-menu.css.map */

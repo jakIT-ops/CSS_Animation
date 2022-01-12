@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  font-size: 40px;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #ffe1c5, #e4a068);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 80px;
+  height: 80px;
+  background-color: #945915;
+  padding: 0 40px;
+  position: relative;
+}
+
+.hours,
+.minutes,
+.seconds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  align-items: start;
+}
+
+.nummber {
+  height: 80px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbfbfb;
+}
+
+.seconds__units {
+  transform: translateY(0);
+  animation: animateSecondsUnits 10s steps(10, end) infinite;
+}
+
+@keyframes animateSecondsUnits {
+  100% {
+    transform: translateY(-800px);
+  }
+}
+.seconds__tens {
+  transform: translateY(0);
+  animation: animateSecondsTens 60s steps(6, end) infinite;
+}
+
+@keyframes animateSecondsTens {
+  100% {
+    transform: translateY(-480px);
+  }
+}
+.minutes__units {
+  transform: translateY(0);
+  animation: animateMinutesUnits 600s steps(10, end) infinite;
+}
+
+@keyframes animateMinutesUnits {
+  100% {
+    transform: translateY(-800px);
+  }
+}
+.minutes__tens {
+  transform: translateY(0);
+  animation: animateMinutesTens 3600s steps(6, end) infinite;
+}
+
+@keyframes animateMinutesTens {
+  100% {
+    transform: translateY(-480px);
+  }
+}
+.hour__units {
+  transform: translateY(0);
+  animation: animateHourUnits 36000s steps(10, end) infinite;
+}
+
+@keyframes animateHourUnits {
+  100% {
+    transform: translateY(-800px);
+  }
+}
+.hour__tens {
+  transform: translateY(0);
+  animation: animateHourTens 108000s steps(3, end) infinite;
+}
+
+@keyframes animateHourTens {
+  100% {
+    transform: translateY(-480px);
+  }
+}
+
+/*# sourceMappingURL=digitalClock.css.map */

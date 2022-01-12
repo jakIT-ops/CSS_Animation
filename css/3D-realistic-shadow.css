@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: teal;
+  font-family: "Fredoka One", cursive;
+}
+
+p {
+  color: #fffeee;
+  font-size: 8em;
+  font-weight: 700;
+}
+
+p span {
+  display: inline-block;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 500;
+}
+
+p span::before,
+p span::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: all ease-out 0.3s;
+  content: attr(data-text);
+  cursor: pointer;
+}
+
+p span::before {
+  z-index: 1;
+  color: rgba(0, 0, 0, 0.2);
+  transform: scale(1.1, 1) skew(0deg, 0deg);
+}
+
+p span::after {
+  z-index: 2;
+  color: teal;
+  text-shadow: 0 0 1px teal, 1px 0 1px rgba(0, 0, 0, 0.7);
+  transform: rotateY(0deg);
+}
+
+p span:hover::before {
+  transform: scale(1.1, 1) skew(0deg, 10deg);
+}
+
+p span:hover::after {
+  transform: rotateY(-30deg);
+}
+
+/*# sourceMappingURL=3D-realistic-shadow.css.map */

@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: lightgrey;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.cards-container {
+  position: relative;
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0 80px;
+  transform: skewY(5deg);
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 400px;
+  background: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-50px);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  background: #cf6f94;
+  transform: skewX(-45deg);
+  transform-origin: bottom;
+  transition: 0.5s;
+  border-bottom: 200px solid #dedede;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 30%;
+  height: 200px;
+  background: #cf6f94;
+  transform: skewY(-45deg);
+  transform-origin: left;
+  transition: 0.5s;
+  border-bottom: 200px solid #dedede;
+}
+
+.card-header {
+  position: relative;
+  width: 250px;
+  height: 200px;
+  background: #f194b8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.card-image {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.card-titile {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card-content {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  padding: 30px;
+  line-height: 1.4;
+  background: #fff;
+  color: #555;
+}
+
+.card-content::before {
+  mask-composite: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+  transform: skewX(-45deg);
+  transform-origin: bottom;
+  transition: 0.5s;
+  filter: blur(3px);
+  z-index: -1;
+}
+
+.card:hover .card-content::before {
+  transform: translateY(50px) skewX(-45deg) scale(1.02);
+  filter: blur(5px);
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=3d-card.css.map */

@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: lightgrey;
+  overflow: hidden;
+  font-family: sans-serif;
+  background-image: linear-gradient(to right bottom, #e9a018, #ea991e, #ea9124, #ea8a29, #e9832e, #ef7e3b, #f47947, #f77553, #ff746a, #ff7581, #ff7a97, #ff80ac);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(orangered, orange);
+  clip-path: circle(20% at 70% 70%);
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  backdrop-filter: blur(3px);
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 20px 40px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.card-title {
+  font-size: 1.5em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.card-text {
+  font-size: 0.9em;
+  color: white;
+  line-height: 1.5;
+}
+
+.card-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  margin-top: 30px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: orange;
+  font-weight: 600;
+  font-size: 0.8em;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*# sourceMappingURL=glass-card.css.map */

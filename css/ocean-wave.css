@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+.ocean-wave {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background: url(/dist/wave.png);
+  bottom: 0;
+  left: 0;
+  animation: wave1 7s linear infinite;
+}
+
+.ocean-wave::before {
+  content: "";
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  background: url(/dist/wave.png);
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+  animation: wave2 10s linear infinite;
+}
+
+.ocean-wave::after {
+  content: "";
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  background: url(/dist/wave.png);
+  left: 0;
+  top: 0;
+  opacity: 0.4;
+  animation: wave3 15s linear infinite;
+}
+
+@keyframes wave1 {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 1400px;
+  }
+}
+@keyframes wave2 {
+  0% {
+    background-position: 1400px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+@keyframes wave3 {
+  0% {
+    background-position: 1400px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+/*# sourceMappingURL=ocean-wave.css.map */

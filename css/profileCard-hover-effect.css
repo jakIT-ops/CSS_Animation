@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #222;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background: #d9ffd9;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+  background: #6aac6a;
+}
+
+.card::after {
+  background: #7ec27e;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.card:hover::before {
+  transform: rotate(20deg);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover::after {
+  transform: rotate(10deg);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.card:hover .card-image {
+  bottom: 80px;
+}
+
+.card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 60px;
+  text-align: center;
+}
+
+.occupation {
+  font-weight: 500;
+  font-size: 14px;
+  color: #777;
+}
+
+/*# sourceMappingURL=profileCard-hover-effect.css.map */

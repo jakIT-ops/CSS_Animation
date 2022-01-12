@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: lightgrey;
+  overflow: hidden;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+}
+
+ul li {
+  list-style: none;
+  transform-style: preserve-3d;
+}
+
+ul li a {
+  color: #fff;
+  font-family: sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+  padding: 10px 15px;
+}
+
+ul li a span::before {
+  content: attr(title);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  background-color: teal;
+  color: #fff;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+  transform: rotateX(90deg) translateY(38px);
+  transform-origin: bottom;
+}
+
+ul li a span:hover::before {
+  transform: rotateX(0deg) translateY(0px);
+}
+
+ul li a span::after {
+  content: attr(title);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  background-color: #fff;
+  color: teal;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+  transform: rotateX(0deg) translateY(0px);
+  transform-origin: top;
+}
+
+ul li a span:hover::after {
+  transform: rotateX(90deg) translateY(-18px);
+}
+
+/*# sourceMappingURL=menu-hover-effect-2.css.map */

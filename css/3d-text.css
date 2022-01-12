@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "Fredoka One", cursive;
+  font-size: 120px;
+  color: #3a0;
+  text-shadow: 0 0.02em 0.02em #4af700, 0 0.02em 0em #247700, 0 0.04em 0em #227200, 0 0.06em 0.02em #216d00, 0 0.08em 0.04em #1f6800, 0 0.1em 0.06em #1e6300, 0 0.12em 0.06em #1c5e00, 0 0.14em 0.04em #1b5800, 0 0.16em 0.02em #195300, 0 0.18em 0em #174e00, 0 0.2em 0em #164900, 0 0.2em 0.08em rgba(0, 0, 0, 0.2), 0 0.2em 0.16em rgba(0, 0, 0, 0.4), 0 0.2em 0.24em rgba(0, 0, 0, 0.6), 0 0.28em 0.2em rgba(0, 0, 0, 0.2), 0 0.36em 0.2em rgba(0, 0, 0, 0.2);
+}
+
+h1:hover {
+  cursor: pointer;
+  color: #3bc400;
+  text-shadow: 0 0.02em 0.02em #58ff11, 0 0.02em 0em #2b9100, 0 0.04em 0em #2a8b00, 0 0.06em 0.02em #288600, 0 0.08em 0.04em #278100, 0 0.1em 0.06em #257c00, 0 0.12em 0.06em #247700, 0 0.14em 0.04em #227200, 0 0.16em 0.02em #216d00, 0 0.18em 0em #1f6800, 0 0.2em 0em #1e6300, 0 0.2em 0.08em rgba(0, 0, 0, 0.2), 0 0.2em 0.16em rgba(0, 0, 0, 0.4), 0 0.2em 0.24em rgba(0, 0, 0, 0.6), 0 0.28em 0.2em rgba(0, 0, 0, 0.2), 0 0.36em 0.2em rgba(0, 0, 0, 0.2);
+}
+
+/*# sourceMappingURL=3d-text.css.map */
